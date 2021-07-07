@@ -18,7 +18,7 @@ const nameTheTeams = function() {
     }
 
     return alert(`     CONFIRMATION:
-    Concerned teams ${teamName[0]} and the ${teamName[1]}`);
+    These are the players/ teams you've added: ${teamName[0]} and ${teamName[1]}`);
 }
 
 const calcScores = function() {
@@ -26,13 +26,13 @@ const calcScores = function() {
 
     const homeScoresLogged = prompt (`How many scores would you like to enter for ${teamName[0]}?`);
     for (let h = 0; h<homeScoresLogged; h++){
-        homeTeamScores[h] = Number.parseInt(prompt(`Enter score ${h+1}`));
+        homeTeamScores[h] = Number(prompt(`Enter score ${h+1}`));
         homeTotal = homeTotal + homeTeamScores[h];
     }
 
     const awayScoresLogged = prompt (`How many scores would you like to enter for ${teamName[1]}?`);
     for (let a = 0; a<awayScoresLogged; a++){
-        awayTeamScores[a] = Number.parseInt(prompt(`Enter score ${a+1}`));
+        awayTeamScores[a] = Number(prompt(`Enter score ${a+1}`));
         awayTotal += awayTeamScores[a];
     }
 
